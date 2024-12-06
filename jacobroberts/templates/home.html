@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h1>Hello, my name is Jacob.</h1>
+<p>I am a software developer currently studying for my master's 
+    at Mississippi State University. I am interested in roles for
+    autonomous vehicle controls, web development, and machine learning.</p>
+
+<h2>Learn more about me: </h2>
+
+<!-- github -->
+
+<a href="https://github.com/jacbroberts" target="_blank">
+    <img src="{% static 'github-mark-26.svg' %}" alt="My GitHub"></a>
+<br>
+
+<!-- linkedin -->
+
+<a href="https://www.linkedin.com/in/jacobaroberts" target="_blank">
+    <img src="{% static 'In-Blue-26.png' %}" alt="LinkedIn"></a>
+<br>
+
+<!-- bluesky -->
+
+<a href="https://bsky.app/profile/jacobroberts.us" target="_blank">
+    <img src="{% static 'bluesky_media_kit_logo-26.svg' %}" alt="BlueSky"></a>
+<br>
+
+
+{% endblock %}
