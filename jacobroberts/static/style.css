@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+  
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: #EAEAEA;
+    background-color: #323550;
+    font-size: 100%;
+}
+
+h1 {
+    color: #6BC1A4;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: right;
+    font-size: 3em;
+}
+
+h2 {
+    color: #EAEAEA;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: right;
+    font-size: 2em;
+}
+
+p {
+    color: #EAEAEA;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 50px 1fr 50px; 
+    grid-template-columns: 2fr 5fr 1fr;
+    height: 100vh; 
+    column-gap: 25px;
+    row-gap: 25px;
+}
+
+.navbar {
+    background-color: #060C2C;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    padding: 0 20px; 
+    grid-column: 1 / 4;
+}
+
+.footer {
+    background-color: #060C2C;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    grid-column: 1 / 4;
+}
+
+.name {
+    justify-content: right; 
+    text-align: right;
+    grid-column: 1;
+    padding: 40px 0;
+}
+
+.name label {
+    font-size: 1em;
+    
+}
+
+
+.content {
+    display: flex;
+    justify-content: left;
+    text-align: justify;
+    grid-column: 2;
+    overflow: scroll; 
+}
+
+.content p {
+    font-size: 2em;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+  }
+
+input {
+    padding: 8px 0px 8px 0px;
+    font-size: 1em;
+    width: 60%;
+    max-width: 300px;
+    margin-right: 10px;
+    font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #EAEAEA;
+}
+
+textarea {
+    padding: 8px 0px 0px 0px;
+    font-size: 1em;
+    width: 60%;
+    max-width: 300px;
+    margin-right: 10px;
+    resize: vertical;
+    font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    background: #EAEAEA;
+}
