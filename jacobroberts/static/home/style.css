@@ -75,7 +75,7 @@ p {
     justify-content: left;
     text-align: justify;
     grid-column: 2;
-    overflow: scroll; 
+    
 }
 
 .content p {
