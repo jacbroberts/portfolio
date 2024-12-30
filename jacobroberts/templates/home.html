@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="stylesheet" href="{% static 'home/style.css' %}">
 
 {% block content %}
 <div class="container">
@@ -10,11 +10,11 @@
         <h1>Jacob</h1>
         <h1>Roberts</h1>
         <a href="https://github.com/jacbroberts" target="_blank">
-            <img src="{% static 'github-mark-white.svg' %}" alt="My GitHub" width="26px"></a>
+            <img src="{% static 'home/github-mark-white.svg' %}" alt="My GitHub" width="26px"></a>
         <a href="https://www.linkedin.com/in/jacobaroberts" target="_blank">
-            <img src="{% static 'In-White-48@2x.png' %}" alt="LinkedIn" width="26px"></a>
+            <img src="{% static 'home/In-White-48@2x.png' %}" alt="LinkedIn" width="26px"></a>
         <a href="https://bsky.app/profile/jacobroberts.us" target="_blank">
-            <img src="{% static 'bluesky_media_kit_logo_transparent_96.png' %}" alt="BlueSky" width="26px"></a>
+            <img src="{% static 'home/bluesky_media_kit_logo_transparent_96.png' %}" alt="BlueSky" width="26px"></a>
 
         <h2>Contact Me</h2>
         <form method="post">
@@ -41,6 +41,6 @@
         <p id="copyYear">&copy</p>
     </div>
 </div>
-<script src="{% static 'home.js' %}"></script>
+<script src="{% static 'home/home.js' %}"></script>
 
 {% endblock %}
