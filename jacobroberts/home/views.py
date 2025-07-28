@@ -10,6 +10,7 @@ def is_spam(message):
     possible_malware_words = ["script.google.com","https","http"]
     if any(word in message.lower() for word in spam_words):
         spam = True
+    if any(word in message.lower() for word in possible_malware_words):
         malware = True
     if malware:
         return "Possible Malware "
