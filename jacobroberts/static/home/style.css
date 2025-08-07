@@ -6,23 +6,23 @@
 }
   
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #EAEAEA;
-    background-color: #323550;
+    background-color: #060C2C;
     font-size: 100%;
 }
+
+
 
 h1 {
     color: #6BC1A4;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: right;
     font-size: 3em;
 }
 
 h2 {
     color: #EAEAEA;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: right;
     font-size: 2em;
 }
 
@@ -30,9 +30,10 @@ p {
     color: #EAEAEA;
 }
 
+
 .container {
     display: grid;
-    grid-template-rows: 50px 1fr 50px; 
+    grid-template-rows: 1fr 2fr 50px; 
     grid-template-columns: 2fr 5fr 1fr;
     height: 100vh; 
     column-gap: 25px;
@@ -40,13 +41,16 @@ p {
 }
 
 .navbar {
-    background-color: #060C2C;
-    width: 100%; 
-    display: flex;
-    align-items: center;
-    padding: 0 20px; 
+    text-align: center;
     grid-column: 1 / 4;
+    display: block;
+    padding: 40px 0;
 }
+
+.navbar h1,h2 {
+    display:inline;
+}
+
 
 .footer {
     background-color: #060C2C;
@@ -58,28 +62,59 @@ p {
 }
 
 .name {
-    justify-content: right; 
-    text-align: right;
+    justify-content: center; 
+    justify-items: center;
+    text-align: center;
     grid-column: 1;
     padding: 40px 0;
+    display: block;
+    font-size: 1.5em;
 }
 
-.name label {
-    font-size: 1em;
+
+
+.name a:link, a:visited {
+    background-color: #323550;
+    color: #EAEAEA;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 75%;
+    padding: 0.3em 1em;
+    display: inline-block;
+    margin-bottom: 1em;
     
 }
 
 
+
+
+.name a:hover {
+    background-color: #6BC1A4;
+}
+
+.name a:active {
+    background-color: #6BC1A4;
+}
+
+.name .current a {
+    background-color: #EAEAEA;
+    color: #323550;
+}
+
+li {
+    list-style-type: none;
+}
+
 .content {
-    display: flex;
-    justify-content: left;
+    display: box;
+    /* justify-content: left;
     text-align: justify;
-    grid-column: 2;
+    grid-column: 2; */
     
 }
 
 .content p {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 form {

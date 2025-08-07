@@ -31,8 +31,10 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = True
 
 if os.environ.get('PRODUCTION'):
+    print("Running in production mode")
     ALLOWED_HOSTS = ["jacobroberts.us", 'localhost']
 else:
+    print("Running in development mode")
     ALLOWED_HOSTS = []
 
 

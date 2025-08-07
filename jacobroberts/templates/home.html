@@ -5,35 +5,38 @@
 {% block content %}
 <div class="container">
     <nav class="navbar">
-    </nav>
-    <div class="name">
-        <h1>Jacob</h1>
-        <h1>Roberts</h1>
-        <a href="https://github.com/jacbroberts" target="_blank">
+        <h2>Hello, my name is</h2>
+        <h1>Jacob</h1><br>
+         <a href="https://github.com/jacbroberts" target="_blank">
             <img src="{% static 'home/github-mark-white.svg' %}" alt="My GitHub" width="26px"></a>
         <a href="https://www.linkedin.com/in/jacobaroberts" target="_blank">
             <img src="{% static 'home/In-White-48@2x.png' %}" alt="LinkedIn" width="26px"></a>
         <a href="https://bsky.app/profile/jacobroberts.us" target="_blank">
             <img src="{% static 'home/bluesky_media_kit_logo_transparent_96.png' %}" alt="BlueSky" width="26px"></a>
+    </nav>
+    <div class="name">
+        <ul>
+            <li class="current"><a class="current" href="/">Home</a></li>
+            <li><a href="/">Education</a></li>
+        </ul>
+        
+        
+        <!-- <h2 class="nav_button">Home</h2><br> -->
+        
 
-        <h2>Contact Me</h2>
-        <form method="post">
-            {% csrf_token %}
-            <input type="email" id="email" name="email" placeholder="Email*" required="true"><br>
-            <input type="text" id="fname" name="fname" placeholder="First Name"><br>
-            <input type="text" id="lname" name="lname" placeholder="Last Name"><br>
-            <input type="text" id="subject" name="subject" placeholder="Subject*" required="true"><br>
-            <textarea id="message" name="message" placeholder="Message*" required="true"></textarea>            
-            <input type="submit" value="Submit">
-        </form>
+        <!-- <h2>Education</h2><br>
+        <h2>Experience</h2><br>
+        <h2>Blog</h2> -->
     </div>
     <div class="content">
         
         <p>
-            Hello, my name is Jacob Roberts. I'm a beginner software engineer. I have a bachelor's in computer science from Mississippi State University. 
-            I am currently pursuing my master's degree in computer science at Mississippi State University. 
-            I have a graduate research position with EcoCAR, an automotive engineering competition, where I lead the autonomous systems team. 
-            I am seeking full-time roles in robotics, machine learning, and backend web development after I graduate in May 2026.
+            I am currently pursuing my Master of Science in Computer Science at Mississippi State University. 
+            Upon graduation in May 2026, I will be seeking full-time software engineering roles in automotive, robotics, machine learning, and backend.
+        </p><br>
+
+        <p>
+            This portfolio is version controlled on my <a href="https://github.com/jacbroberts/portfolio/tree/main" target="_blank">GitHub</a>.
         </p>
         
     </div>
