@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'home/style.css' %}">
+
+{% block content %}
+<div class="container">
+    <nav class="navbar">
+        <h2>Hello, my name is</h2>
+        <h1>Jacob</h1><br>
+         <a href="https://github.com/jacbroberts" target="_blank">
+            <img src="{% static 'home/github-mark-white.svg' %}" alt="My GitHub" width="26px"></a>
+        <a href="https://www.linkedin.com/in/jacobaroberts" target="_blank">
+            <img src="{% static 'home/In-White-48@2x.png' %}" alt="LinkedIn" width="26px"></a>
+        <a href="https://bsky.app/profile/jacobroberts.us" target="_blank">
+            <img src="{% static 'home/bluesky_media_kit_logo_transparent_96.png' %}" alt="BlueSky" width="26px"></a>
+    </nav>
+    <div class="name">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/education">Education</a></li>
+            <li class="current"><a class="current" href="/experience">Experience</a></li>
+        </ul>
+        
+    </div>
+    <div class="content">
+        <p>I have four years of software engineering experience through internships and student leadership positions.</p>
+        <br>
+        <h2 class="company">Mississippi State University EcoCAR</h2>
+        <h3>Connected and Automated Vehicles (CAV) Lead | August 2024 to Present</h3>
+        <br>
+        <p> <a href="https://avtcseries.org/about-the-ecocar-ev-challenge/" target="_blank">EcoCAR</a> is a collegiate automotive engineering competition.
+            As a CAV lead for the MSU EcoCAR team, I am responsible for designing and implementing 
+            a custom Advanced Driver Assistance System for a 2023 Cadillac LYRIQ.
+            I focus on the development of our team's Adaptive Cruise Control and Automatic Intersection Navigation features.
+            As part of my role, I also train, mentor, and manage subteam members.
+
+        </p>
+        
+        <br>
+        
+        <h2 class="company">Argonne National Laboratory</h2>
+        <h3>Software Engineering Intern | May 2025 to August 2025</h3>
+        <br>
+        <p>My project during my <a href="https://avtcseries.org/news-media/avtc-students-step-up-to-the-challenge-through-summer-internships-at-argonne/" target="_blank">second internship at Argonne</a> was centered around the development of tools for vehicle-in-the-loop testing of automatic intersection navigation.
+            The tools will be used for research at Argonne and for the EcoCAR EV Challenge.
+            
+        </p>
+        <br>
+
+        <h2 class="company">Mississippi State University EcoCAR</h2>
+        <h3>Connected and Automated Vehicles Associate Lead | June 2023  to August 2024</h3>
+        <br>
+        <p>As an undergraduate lead for the MSU EcoCAR CAV team, my responsiblities were subteam member engagement, 
+            developing unit tests, and deploying our software to our controllers.
+            
+        </p>
+        <br>
+
+        <h2 class="company">Argonne National Laboratory</h2>
+        <h3>Software Engineering Intern | January 2022 to April 2022</h3>
+        <br>
+        <p>I <a href="https://avtcseries.org/news-media/from-design-to-reality-msus-jacob-roberts-internship-project-for-the-connected-mobility-challenge/" target="_blank">developed a graphical user interface</a> in PyQt5 used for testing V2X enabled vehicles.
+            
+        </p>
+        <br>
+        
+        
+    </div>
+    <div class="footer">
+        <p id="copyYear">&copy</p>
+    </div>
+</div>
+<script src="{% static 'home/home.js' %}"></script>
+
+{% endblock %}
