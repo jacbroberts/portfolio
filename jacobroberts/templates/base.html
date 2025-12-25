@@ -7,6 +7,7 @@
   <title>{% block title %}Jacob Roberts{% endblock %}</title>
   {% load static %}
   <link rel="stylesheet" href="{% static 'home/style.css' %}">
+  <link rel="icon" href="{% static 'home/favicon.svg' %}" type="image/x-icon">
   
 </head>
 
@@ -15,9 +16,40 @@
   </header>
 
   <main>
+    <div class="container">
+    <nav class="navbar">
+        <h2>Hello, my name is</h2>
+        <h1>Jacob</h1><br>
+         <a href="https://github.com/jacbroberts" target="_blank">
+            <img src="{% static 'home/github-mark-white.svg' %}" alt="My GitHub" width="26px"></a>
+        <a href="https://www.linkedin.com/in/jacobaroberts" target="_blank">
+            <img src="{% static 'home/In-White-48@2x.png' %}" alt="LinkedIn" width="26px"></a>
+        <a href="https://bsky.app/profile/jacobroberts.us" target="_blank">
+            <img src="{% static 'home/bluesky_media_kit_logo_transparent_96.png' %}" alt="BlueSky" width="26px"></a>
+    </nav>
+    <div class="name">
+        <ul>
+
+            <li id="home"><a href="/">Home</a></li>
+            {% for page in pages %}
+            <li id="{{ page|lower }}"><a href="/page/{{ page|lower }}">{{ page }}</a></li>
+            {% endfor %}
+            
+        </ul>
+        
+    </div>
+    <div class="content">
     {% block content %}
     {% endblock %}
+    </div>
+    <div class="footer">
+        <p id="copyYear">&copy</p>
+    </div>
+   
   </main>
+  
+
+<script src="{% static 'home/home.js' %}"></script>
 </body>
 
 </html>

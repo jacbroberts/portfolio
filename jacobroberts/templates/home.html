@@ -3,27 +3,9 @@
 <link rel="stylesheet" href="{% static 'home/style.css' %}">
 
 {% block content %}
-<div class="container">
-    <nav class="navbar">
-        <h2>Hello, my name is</h2>
-        <h1>Jacob</h1><br>
-         <a href="https://github.com/jacbroberts" target="_blank">
-            <img src="{% static 'home/github-mark-white.svg' %}" alt="My GitHub" width="26px"></a>
-        <a href="https://www.linkedin.com/in/jacobaroberts" target="_blank">
-            <img src="{% static 'home/In-White-48@2x.png' %}" alt="LinkedIn" width="26px"></a>
-        <a href="https://bsky.app/profile/jacobroberts.us" target="_blank">
-            <img src="{% static 'home/bluesky_media_kit_logo_transparent_96.png' %}" alt="BlueSky" width="26px"></a>
-    </nav>
-    <div class="name">
-        <ul>
-            <li class="current"><a class="current" href="/">Home</a></li>
-            <li><a href="/education">Education</a></li>
-            <li><a href="/experience">Experience</a></li>
-        </ul>
-        
-    </div>
+
+    
     <div class="content">
-        
         <p>
             I am currently pursuing my Master of Science in Computer Science at Mississippi State University. 
             Upon graduation in May 2026, I will be seeking full-time software engineering roles in automotive, robotics, machine learning, and backend.
@@ -34,10 +16,6 @@
         </p>
         
     </div>
-    <div class="footer">
-        <p id="copyYear">&copy</p>
-    </div>
-</div>
-<script src="{% static 'home/home.js' %}"></script>
+    
 
 {% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'home/style.css' %}">
+
+{% block content %}
+
+{% for i in data %}
+
+<h2 class="company">{{i.title}}</h2> 
+<h3> {{i.subtitle}} </h3><br>
+<p> {{i.body}} </p><br>
+{% endfor %}
+
+{% endblock %}
