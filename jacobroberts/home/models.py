@@ -8,11 +8,11 @@ class Page(models.Model):
     TIMELINE = "TL"
     BLOG = "BG"
     SKILL = "SK"
-    TYPE_CHOICES = {
-        TIMELINE: "Timeline",
-        BLOG: "Blog",
-        SKILL: "Skill"
-    }
+    TYPE_CHOICES = (
+        (TIMELINE, "Timeline"),
+        (BLOG, "Blog"),
+        (SKILL, "Skill")
+    )
 
     name = models.CharField(max_length=20,unique=True)
     description = models.CharField(max_length=250,blank=True)
