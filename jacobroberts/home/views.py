@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 import os
 from home.models import Page, Entry, TimeEntry, Post, Skill
+from django.utils import timezone
 
 def is_spam(message):
     spam = False
@@ -63,12 +64,16 @@ def page(request, name):
             
             for entry in entries:
                 info = TimeEntry.objects.get(entry=entry)
+                if (info.present == True):
+                    info.end_date = timezone.now().date()
+                    info.save()
+                
                 data.append({"title":entry.title,
                      "subtitle":info.subtitle,
                      "start_date":info.start_date,
                      "end_date":info.end_date,
                      "body":info.body})
-                data = sorted(data, key=lambda x: x["start_date"], reverse=True)
+                data = sorted(data, key=lambda x: x["end_date"], reverse=True)
                 
             return render(request, "timeline.html",{"data":data,"pages":pages})
                 
