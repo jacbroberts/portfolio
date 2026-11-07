@@ -27,15 +27,14 @@ if os.path.isfile(dotenv_file):
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
 if os.environ.get('PRODUCTION'):
     print("Running in production mode")
     ALLOWED_HOSTS = ["jacobroberts.us", 'localhost']
+    DEBUG = False
 else:
     print("Running in development mode")
     ALLOWED_HOSTS = []
+    DEBUG = True
 
 
 # Application definition
