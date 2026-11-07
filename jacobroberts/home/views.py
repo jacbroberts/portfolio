@@ -65,9 +65,10 @@ def page(request, name):
                 info = TimeEntry.objects.get(entry=entry)
                 data.append({"title":entry.title,
                      "subtitle":info.subtitle,
-                     "start_data":info.start_date,
+                     "start_date":info.start_date,
                      "end_date":info.end_date,
                      "body":info.body})
+                data = sorted(data, key=lambda x: x["start_date"], reverse=True)
                 
             return render(request, "timeline.html",{"data":data,"pages":pages})
                 
