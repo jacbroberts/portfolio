@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.mail import send_mail
 import os
-from home.models import Page, Entry, TimeEntry, Post, Skill
+from home.models import Page, Entry, TimeEntry, Post, Skill, SiteContent
 from django.utils import timezone
 
 def is_spam(message):
@@ -42,8 +42,8 @@ def index(request):
     #         [s_email],
     #         fail_silently=False,
     #     )
-
-    return render(request, "home.html",{"pages":pages})
+    blurb, _ = SiteContent.objects.get_or_create(pk=1)
+    return render(request, "home.html",{"pages":pages, "blurb":blurb})
 
 def education(request):
     return render(request, "education.html")
@@ -86,7 +86,3 @@ def page(request, name):
 
     else:
         return render(request, "404.html",{"pages":pages})
-
-    
-
-    

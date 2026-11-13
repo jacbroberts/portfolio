@@ -74,3 +74,15 @@ class Skill(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class SiteContent(models.Model):
+    home_text = models.TextField(max_length=500, default='''I am currently pursuing my Master of Science in Computer Science at Mississippi State University. 
+    Upon graduation in May 2026, I will be seeking full-time software engineering roles in automotive, robotics, machine learning, and backend''')
+
+    def save(self, *args, **kwargs):
+        self.pk = 1
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return "Site Content"
